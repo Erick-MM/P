@@ -8,15 +8,19 @@ board.on('ready', function(){
 
   this.repl.inject({
     on: function(){ // encender
+      console.log('Encender');
       led.on();
     },
     off: function(){ // apagar
+      console.log('Apagar');
       led.off();
     },
-    blink: function(t){ // parpadear durant t milisegundos
+    blink: function(t){ // parpadear durante 't' milisegundos
+      console.log('Parpadear durante ' + t + ' milisegundos');
       led.blink(t);
     },
     stop: function(){ // parar de parpadear
+      console.log('Detener parpadeo');
       led.stop();
     }
   });
